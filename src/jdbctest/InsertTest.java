@@ -1,11 +1,13 @@
 package jdbctest;
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.sql.*;
 public class InsertTest {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        /*
         Class.forName("com.mysql.jdbc.Driver");
         Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3307/dbtest","root","123456");
+        */
+        Connection conn=ConnectionUtils.getConnection();
+
         if(conn==null){
             System.out.println("Error.");
         }else{
